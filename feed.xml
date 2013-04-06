@@ -1,14 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Blog Name</title>
-  <subtitle>Blog subtitle</subtitle>
+  <title>Blinkplan Nerd Blog</title>
   <id>http://blog.url.com/</id>
-  <link href="http://blog.url.com/"/>
-  <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2013-03-25T00:00:00Z</updated>
+  <link href="http://nerds.blinkplan.com/"/>
+  <link href="http://nerds.blinkplan.com/feed.xml" rel="self"/>
+  <updated>2013-04-06T10:15:00Z</updated>
   <author>
-    <name>Blog Author</name>
+    <name>Joerg Diekmann</name>
   </author>
+  <entry>
+    <title>MongoDB HTTP Console</title>
+    <link rel="alternate" href="/mongodb-http-console/"/>
+    <id>/mongodb-http-console/</id>
+    <published>2013-04-06T10:15:00Z</published>
+    <updated>2013-04-06T10:15:00Z</updated>
+    <author>
+      <name>Joerg Diekmann</name>
+    </author>
+    <content type="html">&lt;p&gt;We are busy developing our REST API, so that our Backbone frontend can create and update flatpan and pagination data. Most of the data is stored in MongoDB.&lt;/p&gt;
+
+&lt;p&gt;As part of the development process, we want to be able to see what is going on from Mongo&amp;#8217;s perspective. I couldn&amp;#8217;t find any log files or traces left behind from our calls, but eventually found this handy interface built into MongoDB.&lt;/p&gt;
+
+&lt;p&gt;It&amp;#8217;s called the HTTP Console. You can fire it up in your browser by adding 1000 to your port number you chose for Mongo. So our&amp;#8217;s is the default port 27017. Therefore,&lt;/p&gt;
+&lt;pre&gt;&lt;code data-language='shell'&gt;
+http://localhost:28017
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;will give you a view into your server. You can see statistics, the last queries you can ran against your collections and so on.&lt;/p&gt;
+
+&lt;p&gt;If you start your MongoDB server with the &amp;#8211;rest option&lt;/p&gt;
+&lt;pre&gt;&lt;code data-language='shell'&gt;
+mongod --rest
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;then, you will be able to access further statistics via that HTTP interface.&lt;/p&gt;
+
+&lt;p&gt;According to the &lt;a href='http://docs.mongodb.org/ecosystem/tools/http-interfaces/#simple-rest-interface'&gt;documentation&lt;/a&gt;,&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The mongod process includes a simple REST interface, with no support for insert/update/remove operations, as a convenience – it is generally used for monitoring/alerting scripts or administrative tasks.&lt;/p&gt;
+&lt;/blockquote&gt;</content>
+  </entry>
   <entry>
     <title>Good bye cruel world</title>
     <link rel="alternate" href="/good-bye-cruel-world/"/>
@@ -16,7 +46,7 @@
     <published>2013-03-25T00:00:00Z</published>
     <updated>2013-03-25T00:00:00Z</updated>
     <author>
-      <name>Article Author</name>
+      <name>Joerg Diekmann</name>
     </author>
     <content type="html">&lt;p&gt;We&amp;#8217;ll be posting some stuff here about Blinkplan engineering.&lt;/p&gt;</content>
   </entry>
