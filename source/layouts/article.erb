@@ -1,0 +1,7 @@
+<% wrap_layout :layout do %>
+  <article>
+    <h3><%= link_to current_page.title, current_page %></h3>
+    <h6 class="subheader">Started on <%= current_page.date.strftime('%b %e') %>.</h6>
+    <%= yield %>
+  </article>
+<% end %>

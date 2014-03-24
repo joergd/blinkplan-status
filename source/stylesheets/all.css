@@ -1,0 +1,23 @@
+body {
+  background: white;
+  color: #220f04;
+}
+a {
+  color: #778C91;
+}
+a:hover, a:focus {
+  color: #404C50;
+}
+
+pre {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+article {
+  margin-bottom: 70px;
+}
+
+.subheader a {
+  color: gray;
+}

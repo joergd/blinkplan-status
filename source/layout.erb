@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= data.page.title %> :: Blinkplan Status</title>
+
+    <%= stylesheet_link_tag "normalize", "foundation", "all", "github" %>
+    <%= javascript_include_tag  "all", "rainbow" %>
+  </head>
+
+  <body class="<%= page_classes %>">
+
+  <!-- Nav Bar -->
+
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Blinkplan <%= link_to "Status", "/" %>.</h1>
+        <hr />
+      </div>
+    </div>
+
+    <!-- End Nav -->
+
+    <div class="row">
+
+      <!-- Main Blog Content -->
+      <div class="large-9 columns" role="content">
+
+        <%= yield %>
+
+      </div>
+
+      <!-- End Main Content -->
+
+
+      <!-- Sidebar -->
+
+      <aside class="large-3 columns">
+
+        <a href="http://www.blinkplan.com" title="magazine flatplan pagination tool"><%= image_tag "logo.png" %></a><br/>
+        <h6 class="subheader">Updates on the status of the Blinkplan service. </h6><br/>
+        <h5>Recent Issues</h5>
+        <ul class="side-nav">
+          <% blog.articles[0...10].each do |article| %>
+            <li><%= link_to article.title, article %></li>
+          <% end %>
+        </ul>
+
+      </aside>
+
+      <!-- End Sidebar -->
+    </div>
+
+    <!-- End Main Content and Sidebar -->
+
+
+    <!-- Footer -->
+
+    <footer class="row">
+      <div class="large-12 columns">
+        <hr />
+        <div class="row">
+          <div class="large-6 columns">
+            <p>&copy; 2014 Blinkplan</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55600-17', 'blinkplan.com');
+      ga('send', 'pageview');
+
+    </script>
+
+  </body>
+</html>
