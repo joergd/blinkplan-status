@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Blinkplan Nerd Blog</title>
+  <title>Blinkplan Status</title>
   <id>http://blog.url.com/</id>
-  <link href="http://nerds.blinkplan.com/"/>
-  <link href="http://nerds.blinkplan.com/feed.xml" rel="self"/>
+  <link href="http://status.blinkplan.com/"/>
+  <link href="http://status.blinkplan.com/feed.xml" rel="self"/>
   <updated>2013-04-06T10:15:00Z</updated>
   <author>
     <name>Joerg Diekmann</name>
